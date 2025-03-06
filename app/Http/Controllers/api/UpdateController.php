@@ -28,7 +28,7 @@ class UpdateController extends Controller
                {
                 return response()->json(
                     [
-                       'status' => '4055eeess',
+                       'status' => '404',
                        'msg'  => 'Imposible la Actualización',
                        'data' =>  "Apertura Clientes OK",
                       ],404);
