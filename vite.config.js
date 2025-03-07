@@ -7,10 +7,20 @@ export default defineConfig({
     build: {
         manifest: true,
       },
-      
+
+    build: {
+        manifest: true, // Asegura que se genere el manifest.json
+        outDir: 'public/build', // Define la carpeta de salida
+        rollupOptions: {
+            input: {
+                app: 'resources/js/app.js',
+            },
+        },
+    },  
+
     plugins: [
-        laravel({
-            input: 'resources/js/app.js',
+        laravel({            
+            input: ['resources/css/app.css', 'resources/js/app.js'],
             refresh: true,
         }),
         vue({
